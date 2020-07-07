@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MavenProject.CarDetailsChecking.TestExecution">
+      <class name="MavenProject.CarDetailsChecking.CarCheckTests">
         <methods>
-          <include name="TestClose"/>
-          <include name="Tests"/>
+          <include name="CarCheckTest" invocation-numbers="1"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- MavenProject.CarDetailsChecking.TestExecution -->
+      </class> <!-- MavenProject.CarDetailsChecking.CarCheckTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

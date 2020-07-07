@@ -9,16 +9,16 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">33,815</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">33,908</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">MavenProject.CarDetailsChecking.TestExecution</td><td><a href="#m0">TestClose</a></td><td rowspan="1">1594144411527</td><td rowspan="1">1426</td></tr><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">MavenProject.CarDetailsChecking.TestExecution</td><td><a href="#m1">Tests</a></td><td rowspan="1">1594144379193</td><td rowspan="1">32316</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">MavenProject.CarDetailsChecking.CarCheckTests</td><td><a href="#m0">tearDown</a></td><td rowspan="1">1594154256728</td><td rowspan="1">1595</td></tr><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">MavenProject.CarDetailsChecking.CarCheckTests</td><td><a href="#m1">CarCheckTest</a></td><td rowspan="1">1594154239157</td><td rowspan="1">5947</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">MavenProject.CarDetailsChecking.CarCheckTests</td><td><a href="#m2">CarCheckTest</a></td><td rowspan="3">1594154250921</td><td rowspan="3">5802</td></tr><tr class="passedeven"><td><a href="#m3">CarCheckTest</a></td></tr><tr class="passedeven"><td><a href="#m4">CarCheckTest</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">MavenProject.CarDetailsChecking.TestExecution#TestClose</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+<h2>Default test</h2><h3 id="m0">MavenProject.CarDetailsChecking.CarCheckTests#tearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;LAPTOP-S1DPEGQP&apos;, ip: &apos;192.168.0.63&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 78.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200630195452, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12680, moz:profile: C:\Users\nnrao\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ff5d1638-0a1f-4b15-9a33-eff448cf85b1
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 78.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200630195452, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 20884, moz:profile: C:\Users\nnrao\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8d3ed737-e80d-4902-892f-76a54c575168
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -31,8 +31,8 @@ Session ID: ff5d1638-0a1f-4b15-9a33-eff448cf85b1
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
 	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
-	at MavenProject.CarDetailsChecking.UserDefinedFunctions.CloseWebsite(UserDefinedFunctions.java:145)
-	at MavenProject.CarDetailsChecking.TestExecution.TestClose(TestExecution.java:16)
+	at MavenProject.CarDetailsChecking.UserDefinedFunctions.CloseWebsite(UserDefinedFunctions.java:240)
+	at MavenProject.CarDetailsChecking.CarCheckTests.tearDown(CarCheckTests.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -58,32 +58,13 @@ Session ID: ff5d1638-0a1f-4b15-9a33-eff448cf85b1
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">MavenProject.CarDetailsChecking.TestExecution#Tests</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[text()=&apos;Registration&apos;]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-S1DPEGQP&apos;, ip: &apos;192.168.0.63&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 78.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200630195452, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12680, moz:profile: C:\Users\nnrao\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ff5d1638-0a1f-4b15-9a33-eff448cf85b1
-*** Element info: {Using=xpath, value=//*[text()=&apos;Registration&apos;]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at MavenProject.CarDetailsChecking.UserDefinedFunctions.ExtractItem(UserDefinedFunctions.java:131)
-	at MavenProject.CarDetailsChecking.UserDefinedFunctions.ExctractCarInfoFromWebSite(UserDefinedFunctions.java:113)
-	at MavenProject.CarDetailsChecking.CarCheck2.carDetailsCompare(CarCheck2.java:35)
-	at MavenProject.CarDetailsChecking.TestExecution.Tests(TestExecution.java:11)
+<h3 id="m1">MavenProject.CarDetailsChecking.CarCheckTests#CarCheckTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>BW57 BOW</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:751)
+	at org.testng.Assert.assertEquals(Assert.java:761)
+	at MavenProject.CarDetailsChecking.CarCheckTests.CarCheckTest(CarCheckTests.java:83)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -113,5 +94,8 @@ Session ID: ff5d1638-0a1f-4b15-9a33-eff448cf85b1
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">MavenProject.CarDetailsChecking.CarCheckTests#CarCheckTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>SG18 HTN</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">MavenProject.CarDetailsChecking.CarCheckTests#CarCheckTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>KT17DLX</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">MavenProject.CarDetailsChecking.CarCheckTests#CarCheckTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>DN09HRM</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -1,6 +1,8 @@
 package MavenProject.CarDetailsChecking;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Dictionary;
@@ -59,7 +61,64 @@ e.printStackTrace();
 return carsList;
 }
 
-public static List<String> ExtractDataOutputFile(String OutputTextFileName)
+/**
+* Returns only text files in the given folder
+* @param folderName
+* @return
+*/
+public static File[] findAllTextFiles( String folderName){
+        File folder = new File(folderName);
+
+        return folder.listFiles(new FilenameFilter() {
+                 public boolean accept(File dir, String filename)
+                      { return filename.endsWith(".txt"); }
+        } );
+
+    }
+
+/**
+* Extracts car data from all text files in the given fodler
+* @param inputFolderName
+* @return
+*/
+public static List<String> ExtractCarDataFromInputFolder(String inputFolderName)
+{
+List<String> carsList = new ArrayList();
+
+String CAR_NUMBER_REGEX = "[A-Za-z]{2}[0-9]{2}[ ]{0,1}[a-zA-Z]{3}";
+Pattern p = Pattern.compile(CAR_NUMBER_REGEX);
+BufferedReader reader;
+
+for(File textFile : findAllTextFiles(inputFolderName))
+{
+try {
+reader = new BufferedReader(new FileReader(textFile));
+String line;  
+
+while((line=reader.readLine())!=null)   {
+Matcher m = p.matcher(line);
+   
+while(m.find()) {
+       //System.out.println(m.group());
+       carsList.add(m.group());
+       }
+}
+reader.close();
+}
+catch (IOException e) {
+e.printStackTrace();
+}
+}
+
+return carsList;
+}
+
+/**
+* Extracts the data from given text file as array of content from each row
+* @param OutputTextFileName
+* @return
+*/
+public static List<String> ExtractDataFromOutputFile(String OutputTextFileName)
 {
 List<String> OutputFileData = new ArrayList();
 
@@ -81,6 +140,40 @@ e.printStackTrace();
 return OutputFileData;
 }
 
+/**
+* Extracts the data from all text files in the given folder as array of each row
+* @param OutputFolderName
+* @return
+*/
+public static List<String> ExtractDataFromOutputFolder(String OutputFolderName)
+{
+List<String> OutputFileData = new ArrayList();
+
+BufferedReader reader;
+
+for(File textFile : findAllTextFiles(OutputFolderName))
+{
+try {
+reader = new BufferedReader(new FileReader(textFile));
+String line;  
+
+while((line=reader.readLine())!=null)   {
+OutputFileData.add(line);
+}
+reader.close();
+}
+catch (IOException e) {
+e.printStackTrace();
+}
+}
+
+return OutputFileData;
+}
+
+/**
+* Open the given website
+* @param Url
+*/
 public static void OpenWebSite(String Url)
 {
 WebDriverManager.firefoxdriver().setup();
@@ -98,9 +191,8 @@ driver = new FirefoxDriver();
 */
 public static Map<String, String> ExctractCarInfoFromWebSite(String carRegNumber) throws InterruptedException
 {
-	 driver.navigate().refresh();
 WebElement searchBox= driver.findElement(By.id("vrm-input"));
-
+searchBox.clear();
         searchBox.sendKeys(carRegNumber);
        
         WebElement getFullCheckButton = driver.findElement(By.xpath("//button[contains(@class,'jsx-3655351943')]"));
@@ -139,6 +231,9 @@ WebElement dataTerm = driver.findElement(By.xpath("//*[text()='"+ItemName+"']"))
         return dataDescirption.getText();
 }
 
+/**
+* Close the website
+*/
 public static void CloseWebsite()
 {
 driver.close();

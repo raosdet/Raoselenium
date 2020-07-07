@@ -1,51 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33815" started-at="2020-07-07T18:52:59 BST" finished-at="2020-07-07T18:53:32 BST">
+  <suite name="Default suite" duration-ms="33908" started-at="2020-07-07T21:37:04 BST" finished-at="2020-07-07T21:37:38 BST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33815" started-at="2020-07-07T18:52:59 BST" finished-at="2020-07-07T18:53:32 BST">
-      <class name="MavenProject.CarDetailsChecking.TestExecution">
-        <test-method status="FAIL" signature="Tests()[pri:0, instance:MavenProject.CarDetailsChecking.TestExecution@17776a8]" name="Tests" duration-ms="32316" started-at="2020-07-07T18:52:59 BST" finished-at="2020-07-07T18:53:31 BST">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+    <test name="Default test" duration-ms="33908" started-at="2020-07-07T21:37:04 BST" finished-at="2020-07-07T21:37:38 BST">
+      <class name="MavenProject.CarDetailsChecking.CarCheckTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:MavenProject.CarDetailsChecking.CarCheckTests@365c30cc]" name="setUp" is-config="true" duration-ms="8715" started-at="2020-07-07T21:37:04 BST" finished-at="2020-07-07T21:37:13 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="CarCheckTest(java.lang.String)[pri:0, instance:MavenProject.CarDetailsChecking.CarCheckTests@365c30cc]" name="CarCheckTest" duration-ms="5927" started-at="2020-07-07T21:37:13 BST" data-provider="testData" finished-at="2020-07-07T21:37:19 BST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DN09HRM]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CarCheckTest -->
+        <test-method status="FAIL" signature="CarCheckTest(java.lang.String)[pri:0, instance:MavenProject.CarDetailsChecking.CarCheckTests@365c30cc]" name="CarCheckTest" duration-ms="5947" started-at="2020-07-07T21:37:19 BST" data-provider="testData" finished-at="2020-07-07T21:37:25 BST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[BW57 BOW]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Unable to locate element: //*[text()='Registration']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-S1DPEGQP', ip: '192.168.0.63', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 78.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200630195452, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12680, moz:profile: C:\Users\nnrao\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ff5d1638-0a1f-4b15-9a33-eff448cf85b1
-*** Element info: {Using=xpath, value=//*[text()='Registration']}]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[text()='Registration']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-S1DPEGQP', ip: '192.168.0.63', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 78.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200630195452, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12680, moz:profile: C:\Users\nnrao\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ff5d1638-0a1f-4b15-9a33-eff448cf85b1
-*** Element info: {Using=xpath, value=//*[text()='Registration']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at MavenProject.CarDetailsChecking.UserDefinedFunctions.ExtractItem(UserDefinedFunctions.java:131)
-at MavenProject.CarDetailsChecking.UserDefinedFunctions.ExctractCarInfoFromWebSite(UserDefinedFunctions.java:113)
-at MavenProject.CarDetailsChecking.CarCheck2.carDetailsCompare(CarCheck2.java:35)
-at MavenProject.CarDetailsChecking.TestExecution.Tests(TestExecution.java:11)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:751)
+at org.testng.Assert.assertEquals(Assert.java:761)
+at MavenProject.CarDetailsChecking.CarCheckTests.CarCheckTest(CarCheckTests.java:83)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -76,27 +72,49 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Tests -->
-        <test-method status="FAIL" signature="TestClose()[pri:0, instance:MavenProject.CarDetailsChecking.TestExecution@17776a8]" name="TestClose" is-config="true" duration-ms="1426" started-at="2020-07-07T18:53:31 BST" finished-at="2020-07-07T18:53:32 BST">
+        </test-method> <!-- CarCheckTest -->
+        <test-method status="PASS" signature="CarCheckTest(java.lang.String)[pri:0, instance:MavenProject.CarDetailsChecking.CarCheckTests@365c30cc]" name="CarCheckTest" duration-ms="5809" started-at="2020-07-07T21:37:25 BST" data-provider="testData" finished-at="2020-07-07T21:37:30 BST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[KT17DLX]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CarCheckTest -->
+        <test-method status="PASS" signature="CarCheckTest(java.lang.String)[pri:0, instance:MavenProject.CarDetailsChecking.CarCheckTests@365c30cc]" name="CarCheckTest" duration-ms="5802" started-at="2020-07-07T21:37:30 BST" data-provider="testData" finished-at="2020-07-07T21:37:36 BST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SG18 HTN]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CarCheckTest -->
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:MavenProject.CarDetailsChecking.CarCheckTests@365c30cc]" name="tearDown" is-config="true" duration-ms="1595" started-at="2020-07-07T21:37:36 BST" finished-at="2020-07-07T21:37:38 BST">
           <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
               <![CDATA[Tried to run command without establishing a connection
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-S1DPEGQP', ip: '192.168.0.63', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 78.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200630195452, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12680, moz:profile: C:\Users\nnrao\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ff5d1638-0a1f-4b15-9a33-eff448cf85b1]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 78.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200630195452, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 20884, moz:profile: C:\Users\nnrao\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8d3ed737-e80d-4902-892f-76a54c575168]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-S1DPEGQP', ip: '192.168.0.63', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 78.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200630195452, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12680, moz:profile: C:\Users\nnrao\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ff5d1638-0a1f-4b15-9a33-eff448cf85b1
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 78.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200630195452, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 20884, moz:profile: C:\Users\nnrao\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8d3ed737-e80d-4902-892f-76a54c575168
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -109,8 +127,8 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
 at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
-at MavenProject.CarDetailsChecking.UserDefinedFunctions.CloseWebsite(UserDefinedFunctions.java:145)
-at MavenProject.CarDetailsChecking.TestExecution.TestClose(TestExecution.java:16)
+at MavenProject.CarDetailsChecking.UserDefinedFunctions.CloseWebsite(UserDefinedFunctions.java:240)
+at MavenProject.CarDetailsChecking.CarCheckTests.tearDown(CarCheckTests.java:40)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -140,8 +158,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestClose -->
-      </class> <!-- MavenProject.CarDetailsChecking.TestExecution -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- MavenProject.CarDetailsChecking.CarCheckTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
